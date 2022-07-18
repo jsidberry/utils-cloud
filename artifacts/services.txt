@@ -1,0 +1,439 @@
+Linux Discovery Report
+
+------------------
+Server/Domain_Name
+------------------
+ip-172-31-26-157.us-east-2.compute.internal
+ip-172-31-26-157.us-east-2.compute.internal
+ip-172-31-26-157.us-east-2.compute.internal
+
+--------
+OS Level
+--------
+NAME="Red Hat Enterprise Linux"
+VERSION="8.6 (Ootpa)"
+
+------------
+IP Addresses
+------------
+172.31.26.157/20
+
+-----------
+Web Servers
+-----------
+0 nginx
+0 apache
+0 apache2
+
+----------------------------------------
+List of services using systemctl command
+----------------------------------------
+UNIT                                   LOAD   ACTIVE SUB     DESCRIPTION                                                                                                                                                                                                                                                                        
+auditd.service                         loaded active running Security Auditing Service                                                                                                                                                                                                                                                          
+choose_repo.service                    loaded active exited  LSB: Initializes the correct repo depending on the region.                                                                                                                                                                                                                         
+chronyd.service                        loaded active running NTP client/server                                                                                                                                                                                                                                                                  
+cloud-config.service                   loaded active exited  Apply the settings specified in cloud-config                                                                                                                                                                                                                                       
+cloud-final.service                    loaded active exited  Execute cloud user/final scripts                                                                                                                                                                                                                                                   
+cloud-init-local.service               loaded active exited  Initial cloud-init job (pre-networking)                                                                                                                                                                                                                                            
+cloud-init.service                     loaded active exited  Initial cloud-init job (metadata service crawler)                                                                                                                                                                                                                                  
+crond.service                          loaded active running Command Scheduler                                                                                                                                                                                                                                                                  
+dbus.service                           loaded active running D-Bus System Message Bus                                                                                                                                                                                                                                                           
+dracut-shutdown.service                loaded active exited  Restore /run/initramfs on shutdown                                                                                                                                                                                                                                                 
+getty@tty1.service                     loaded active running Getty on tty1                                                                                                                                                                                                                                                                      
+import-state.service                   loaded active exited  Import network configuration from initramfs                                                                                                                                                                                                                                        
+irqbalance.service                     loaded active running irqbalance daemon                                                                                                                                                                                                                                                                  
+kdump.service                          loaded active exited  Crash recovery kernel arming                                                                                                                                                                                                                                                       
+kmod-static-nodes.service              loaded active exited  Create list of required static device nodes for the current kernel                                                                                                                                                                                                                 
+ldconfig.service                       loaded active exited  Rebuild Dynamic Linker Cache                                                                                                                                                                                                                                                       
+NetworkManager-wait-online.service     loaded active exited  Network Manager Wait Online                                                                                                                                                                                                                                                        
+NetworkManager.service                 loaded active running Network Manager                                                                                                                                                                                                                                                                    
+nis-domainname.service                 loaded active exited  Read and set NIS domainname from /etc/sysconfig/network                                                                                                                                                                                                                            
+polkit.service                         loaded active running Authorization Manager                                                                                                                                                                                                                                                              
+rh-cloud-firstboot.service             loaded active exited  SYSV: Firstboot runs the first time a cloud instance is booted after installation.  It checks for the existance of an /etc/sysconfig/rh-cloud-firstboot file.  If the file exists and contains RUN_FIRSTBOOT=NO, firstboot will not run.  Otherwise rh-cloud-firstboot will be run.
+rhsmcertd.service                      loaded active running Enable periodic update of entitlement certificates.                                                                                                                                                                                                                                
+rsyslog.service                        loaded active running System Logging Service                                                                                                                                                                                                                                                             
+serial-getty@ttyS0.service             loaded active running Serial Getty on ttyS0                                                                                                                                                                                                                                                              
+sshd.service                           loaded active running OpenSSH server daemon                                                                                                                                                                                                                                                              
+sssd.service                           loaded active running System Security Services Daemon                                                                                                                                                                                                                                                    
+systemd-hwdb-update.service            loaded active exited  Rebuild Hardware Database                                                                                                                                                                                                                                                          
+systemd-journal-catalog-update.service loaded active exited  Rebuild Journal Catalog                                                                                                                                                                                                                                                            
+systemd-journal-flush.service          loaded active exited  Flush Journal to Persistent Storage                                                                                                                                                                                                                                                
+systemd-journald.service               loaded active running Journal Service                                                                                                                                                                                                                                                                    
+systemd-logind.service                 loaded active running Login Service                                                                                                                                                                                                                                                                      
+systemd-machine-id-commit.service      loaded active exited  Commit a transient machine-id on disk                                                                                                                                                                                                                                              
+systemd-random-seed.service            loaded active exited  Load/Save Random Seed                                                                                                                                                                                                                                                              
+systemd-remount-fs.service             loaded active exited  Remount Root and Kernel File Systems                                                                                                                                                                                                                                               
+systemd-sysctl.service                 loaded active exited  Apply Kernel Variables                                                                                                                                                                                                                                                             
+systemd-sysusers.service               loaded active exited  Create System Users                                                                                                                                                                                                                                                                
+systemd-tmpfiles-setup-dev.service     loaded active exited  Create Static Device Nodes in /dev                                                                                                                                                                                                                                                 
+systemd-tmpfiles-setup.service         loaded active exited  Create Volatile Files and Directories                                                                                                                                                                                                                                              
+systemd-udev-trigger.service           loaded active exited  udev Coldplug all Devices                                                                                                                                                                                                                                                          
+systemd-udevd.service                  loaded active running udev Kernel Device Manager                                                                                                                                                                                                                                                         
+systemd-update-done.service            loaded active exited  Update is Completed                                                                                                                                                                                                                                                                
+systemd-update-utmp.service            loaded active exited  Update UTMP about System Boot/Shutdown                                                                                                                                                                                                                                             
+systemd-user-sessions.service          loaded active exited  Permit User Sessions                                                                                                                                                                                                                                                               
+tuned.service                          loaded active running Dynamic System Tuning Daemon                                                                                                                                                                                                                                                       
+user-runtime-dir@1000.service          loaded active exited  User runtime directory /run/user/1000                                                                                                                                                                                                                                              
+user@1000.service                      loaded active running User Manager for UID 1000                                                                                                                                                                                                                                                          
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+
+46 loaded units listed. Pass --all to see loaded but inactive units, too.
+To show all installed unit files use 'systemctl list-unit-files'.
+
+--------------------------------------
+List of services using service command
+--------------------------------------
+Usage: /etc/init.d/rh-cloud-firstboot {start|stop}
+
+-----------------------------
+Port Allocation using netstat
+-----------------------------
+Netid State Recv-Q Send-Q                                           Local Address:Port   Peer Address:Port  Process
+u_str ESTAB 0      0                                                            * 33720             * 0            
+u_str ESTAB 0      0                                                            * 27813             * 0            
+u_str ESTAB 0      0                                                            * 21813             * 21812        
+u_str ESTAB 0      0                                                            * 204457            * 0            
+u_str ESTAB 0      0                                                            * 23131             * 21821        
+u_str ESTAB 0      0                      /var/lib/sss/pipes/private/sbus-monitor 72674             * 75977        
+u_str ESTAB 0      0                                                            * 23730             * 20842        
+u_str ESTAB 0      0                                  /run/dbus/system_bus_socket 22180             * 21487        
+u_str ESTAB 0      0                                                            * 205489            * 205490       
+u_str ESTAB 0      0                                                            * 23508             * 21469        
+u_str ESTAB 0      0                                  /run/systemd/journal/stdout 75425             * 72661        
+u_str ESTAB 0      0                                                            * 204013            * 0            
+u_str ESTAB 0      0                                  /run/systemd/journal/stdout 23517             * 24266        
+u_str ESTAB 0      0                                                            * 206279            * 0            
+u_str ESTAB 0      0                                  /run/systemd/journal/stdout 21593             * 22778        
+u_str ESTAB 0      0                                                            * 21222             * 23218        
+u_str ESTAB 0      0                                  /run/dbus/system_bus_socket 204550            * 205239       
+u_str ESTAB 0      0                                  /run/dbus/system_bus_socket 21814             * 20787        
+u_str ESTAB 0      0      /var/lib/sss/pipes/private/sbus-dp_implicit_files.24207 76831             * 76830        
+u_str ESTAB 0      0                                                            * 22475             * 22474        
+u_str ESTAB 0      0                                                            * 26838             * 26843        
+u_str ESTAB 0      0      /var/lib/sss/pipes/private/sbus-dp_implicit_files.24207 76836             * 75975        
+u_str ESTAB 0      0                                  /run/systemd/journal/stdout 203529            * 203526       
+u_str ESTAB 0      0                                                            * 210465            * 0            
+u_str ESTAB 0      0                                                            * 22177             * 0            
+u_str ESTAB 0      0                                                            * 205239            * 204550       
+u_str ESTAB 0      0                                                            * 21514             * 21515        
+u_str ESTAB 0      0                                                            * 75975             * 76836        
+u_str ESTAB 0      0                                                            * 76830             * 76831        
+u_str ESTAB 0      0                                  /run/dbus/system_bus_socket 21469             * 23508        
+u_str ESTAB 0      0                                                            * 204461            * 0            
+u_str ESTAB 0      0                                                            * 206302            * 0            
+u_str ESTAB 0      0                                  /run/dbus/system_bus_socket 21821             * 23131        
+u_str ESTAB 0      0                                  /run/dbus/system_bus_socket 23220             * 21232        
+u_str ESTAB 0      0                                                            * 75977             * 72674        
+u_str ESTAB 0      0                                  /run/systemd/journal/stdout 24149             * 23499        
+u_str ESTAB 0      0                      /var/lib/sss/pipes/private/sbus-monitor 72673             * 76835        
+u_str ESTAB 0      0                                                            * 205490            * 205489       
+u_str ESTAB 0      0                      /var/lib/sss/pipes/private/sbus-monitor 72668             * 72667        
+u_str ESTAB 0      0                                                            * 211040            * 0            
+u_str ESTAB 0      0                                  /run/systemd/journal/stdout 20842             * 23730        
+u_str ESTAB 0      0                                                            * 72667             * 72668        
+u_str ESTAB 0      0                                                            * 205255            * 205254       
+u_str ESTAB 0      0                                                            * 203541            * 0            
+u_str ESTAB 0      0                                                            * 72661             * 75425        
+u_str ESTAB 0      0                                                            * 24266             * 23517        
+u_str ESTAB 0      0                                                            * 22396             * 24934        
+u_str ESTAB 0      0                                                            * 23499             * 24149        
+u_str ESTAB 0      0                                  /run/dbus/system_bus_socket 24934             * 22396        
+u_str ESTAB 0      0                                                            * 21487             * 22180        
+u_str ESTAB 0      0                                                            * 22474             * 22475        
+u_str ESTAB 0      0                                                            * 205254            * 205255       
+u_str ESTAB 0      0                                                            * 24270             * 0            
+u_str ESTAB 0      0                                                            * 34532             * 0            
+u_str ESTAB 0      0                                                            * 20670             * 15303        
+u_str ESTAB 0      0                                                            * 203043            * 0            
+u_str ESTAB 0      0                                  /run/systemd/journal/stdout 23218             * 21222        
+u_str ESTAB 0      0                                                            * 76835             * 72673        
+u_str ESTAB 0      0                                                            * 22778             * 21593        
+u_str ESTAB 0      0                                                            * 21812             * 21813        
+u_str ESTAB 0      0                                  /run/systemd/journal/stdout 40878             * 43121        
+u_str ESTAB 0      0                                                            * 20787             * 21814        
+u_str ESTAB 0      0                                                            * 43121             * 40878        
+u_str ESTAB 0      0                                  /run/systemd/journal/stdout 15303             * 20670        
+u_str ESTAB 0      0                                  /run/systemd/journal/stdout 26843             * 26838        
+u_str ESTAB 0      0                                                            * 21232             * 23220        
+u_str ESTAB 0      0                                                            * 21515             * 21514        
+u_str ESTAB 0      0                                                            * 203526            * 203529       
+udp   ESTAB 0      0                                           172.31.26.157%eth0:bootpc  172.31.16.1:bootps       
+tcp   ESTAB 0      0                                                172.31.26.157:ssh    99.85.71.227:57074        
+tcp   ESTAB 0      0                                                172.31.26.157:ssh    99.85.71.227:57121        
+
+--------
+CPU info
+--------
+Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+CPU(s):              4
+On-line CPU(s) list: 0-3
+Thread(s) per core:  1
+Core(s) per socket:  4
+Socket(s):           1
+NUMA node(s):        1
+Vendor ID:           GenuineIntel
+CPU family:          6
+Model:               79
+Model name:          Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+Stepping:            1
+CPU MHz:             2299.819
+BogoMIPS:            4600.09
+Hypervisor vendor:   Xen
+Virtualization type: full
+L1d cache:           32K
+L1i cache:           32K
+L2 cache:            256K
+L3 cache:            46080K
+NUMA node0 CPU(s):   0-3
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology cpuid pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm cpuid_fault invpcid_single pti fsgsbase bmi1 avx2 smep bmi2 erms invpcid xsaveopt
+NAME="Red Hat Enterprise Linux"
+VERSION="8.6 (Ootpa)"
+
+-----------
+MEMORY info
+-----------
+RANGE                                  SIZE  STATE REMOVABLE  BLOCK
+0x0000000000000000-0x00000000efffffff  3.8G online       yes   0-29
+0x0000000100000000-0x000000040fffffff 12.3G online       yes 32-129
+
+Memory block size:       128M
+Total online memory:      16G
+Total offline memory:      0B
+
+MemTotal:       16204880 kB
+MemFree:        14900688 kB
+MemAvailable:   15695340 kB
+
+---------
+DISK info
+---------
+NAME    MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
+xvda    202:0    0  10G  0 disk 
+├─xvda1 202:1    0   1M  0 part 
+└─xvda2 202:2    0  10G  0 part /
+
+-------------
+HARDWARE info
+-------------
+ip-172-31-26-157.us-east-2.compute.internal
+    description: Computer
+    product: HVM domU
+    vendor: Xen
+    version: 4.2.amazon
+    serial: ec2006c8-7eb6-aa84-d8c3-14c479933ac5
+    width: 64 bits
+    capabilities: smbios-2.7 dmi-2.7 smp vsyscall32
+    configuration: boot=normal uuid=ec2006c8-7eb6-aa84-d8c3-14c479933ac5
+  *-core
+       description: Motherboard
+       physical id: 0
+     *-firmware
+          description: BIOS
+          vendor: Xen
+          physical id: 0
+          version: 4.2.amazon
+          date: 08/24/2006
+          size: 96KiB
+          capabilities: pci edd
+     *-cpu:0
+          description: CPU
+          product: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+          vendor: Intel Corp.
+          physical id: 401
+          bus info: cpu@0
+          version: 6.79.1
+          slot: CPU 1
+          size: 2300MHz
+          capacity: 2300MHz
+          width: 64 bits
+          capabilities: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx pdpe1gb rdtscp x86-64 constant_tsc rep_good nopl xtopology cpuid pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm cpuid_fault invpcid_single pti fsgsbase bmi1 avx2 smep bmi2 erms invpcid xsaveopt
+          configuration: microcode=184549438
+     *-cpu:1
+          description: CPU
+          vendor: Intel
+          physical id: 402
+          bus info: cpu@1
+          slot: CPU 2
+          size: 2300MHz
+          capacity: 2300MHz
+     *-cpu:2
+          description: CPU
+          vendor: Intel
+          physical id: 403
+          bus info: cpu@2
+          slot: CPU 3
+          size: 2300MHz
+          capacity: 2300MHz
+     *-cpu:3
+          description: CPU
+          vendor: Intel
+          physical id: 404
+          bus info: cpu@3
+          slot: CPU 4
+          size: 2300MHz
+          capacity: 2300MHz
+     *-memory
+          description: System Memory
+          physical id: 1000
+          size: 16GiB
+          capabilities: ecc
+          configuration: errordetection=multi-bit-ecc
+        *-bank
+             description: DIMM RAM
+             physical id: 0
+             slot: DIMM 0
+             size: 16GiB
+             width: 64 bits
+     *-pci
+          description: Host bridge
+          product: 440FX - 82441FX PMC [Natoma]
+          vendor: Intel Corporation
+          physical id: 100
+          bus info: pci@0000:00:00.0
+          version: 02
+          width: 32 bits
+          clock: 33MHz
+        *-isa
+             description: ISA bridge
+             product: 82371SB PIIX3 ISA [Natoma/Triton II]
+             vendor: Intel Corporation
+             physical id: 1
+             bus info: pci@0000:00:01.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: isa bus_master
+             configuration: latency=0
+           *-pnp00:00
+                product: PnP device PNP0c02
+                physical id: 0
+                capabilities: pnp
+                configuration: driver=system
+           *-pnp00:01
+                product: PnP device PNP0c02
+                physical id: 1
+                capabilities: pnp
+                configuration: driver=system
+           *-pnp00:02
+                product: PnP device PNP0b00
+                physical id: 2
+                capabilities: pnp
+                configuration: driver=rtc_cmos
+           *-pnp00:03
+                product: PnP device PNP0f13
+                physical id: 3
+                capabilities: pnp
+                configuration: driver=i8042 aux
+           *-pnp00:04
+                product: PnP device PNP0303
+                physical id: 4
+                capabilities: pnp
+                configuration: driver=i8042 kbd
+           *-pnp00:05
+                product: PnP device PNP0700
+                physical id: 5
+                capabilities: pnp
+           *-pnp00:06
+                product: PnP device PNP0501
+                physical id: 6
+                capabilities: pnp
+                configuration: driver=serial
+           *-pnp00:07
+                product: PnP device PNP0c02
+                physical id: 7
+                capabilities: pnp
+                configuration: driver=system
+        *-ide
+             description: IDE interface
+             product: 82371SB PIIX3 IDE [Natoma/Triton II]
+             vendor: Intel Corporation
+             physical id: 1.1
+             bus info: pci@0000:00:01.1
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: ide isa_compat_mode bus_master
+             configuration: driver=ata_piix latency=64
+             resources: irq:0 ioport:1f0(size=8) ioport:3f6 ioport:170(size=8) ioport:376 ioport:c100(size=16)
+        *-bridge UNCLAIMED
+             description: Bridge
+             product: 82371AB/EB/MB PIIX4 ACPI
+             vendor: Intel Corporation
+             physical id: 1.3
+             bus info: pci@0000:00:01.3
+             version: 01
+             width: 32 bits
+             clock: 33MHz
+             capabilities: bridge bus_master
+             configuration: latency=0
+        *-display
+             description: VGA compatible controller
+             product: GD 5446
+             vendor: Cirrus Logic
+             physical id: 2
+             bus info: pci@0000:00:02.0
+             logical name: /dev/fb0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: vga_controller bus_master fb
+             configuration: depth=16 driver=cirrus latency=0 resolution=1024,768
+             resources: irq:0 memory:f0000000-f1ffffff memory:f3000000-f3000fff memory:c0000-dffff
+        *-generic
+             description: Unassigned class
+             product: Xen Platform Device
+             vendor: XenSource, Inc.
+             physical id: 3
+             bus info: pci@0000:00:03.0
+             version: 01
+             width: 32 bits
+             clock: 33MHz
+             capabilities: bus_master
+             configuration: driver=xen-platform-pci latency=0
+             resources: irq:28 ioport:c000(size=256) memory:f2000000-f2ffffff
+  *-input:0
+       product: Power Button
+       physical id: 1
+       logical name: input0
+       logical name: /dev/input/event0
+       capabilities: platform
+  *-input:1
+       product: Sleep Button
+       physical id: 2
+       logical name: input1
+       logical name: /dev/input/event1
+       capabilities: platform
+  *-input:2
+       product: AT Translated Set 2 keyboard
+       physical id: 3
+       logical name: input2
+       logical name: /dev/input/event2
+       logical name: input2::capslock
+       logical name: input2::numlock
+       logical name: input2::scrolllock
+       capabilities: i8042
+  *-input:3
+       product: ImExPS/2 Generic Explorer Mouse
+       physical id: 4
+       logical name: input4
+       logical name: /dev/input/event3
+       logical name: /dev/input/mouse0
+       capabilities: i8042
+  *-input:4
+       product: PC Speaker
+       physical id: 5
+       logical name: input5
+       logical name: /dev/input/event4
+       capabilities: isa
+  *-network
+       description: Ethernet interface
+       physical id: 6
+       logical name: eth0
+       serial: 06:b1:ca:c1:ed:72
+       capabilities: ethernet physical
+       configuration: broadcast=yes driver=vif driverversion=4.18.0-372.9.1.el8.x86_64 ip=172.31.26.157 link=yes multicast=yes
