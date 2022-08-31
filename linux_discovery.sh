@@ -113,9 +113,16 @@ echo "USERS info" >> $serveroutputfile
 echo "-------------" >> $serveroutputfile
 cat /etc/passwd >> $serveroutputfile
 
+# get GROUPS info
+echo "" >> $serveroutputfile
+echo "-------------" >> $serveroutputfile
+echo "GROUPS info" >> $serveroutputfile
+echo "-------------" >> $serveroutputfile
+cat /etc/group >> $serveroutputfile
+
 # get CURRENT RUNNING STATE processes info
 echo "" >> $serveroutputfile
 echo "-------------" >> $serveroutputfile
-echo "USERS info" >> $serveroutputfile
+echo "PROCESSES info" >> $serveroutputfile
 echo "-------------" >> $serveroutputfile
 ps aux >> $serveroutputfile
