@@ -2,107 +2,120 @@
 #
 # Sample shell script to discover web-servers
 #
+eval "serveroutputfile=services_$HOSTNAME.out"
 
 # heading
-echo "Linux Discovery Report" > services.out
+echo "Linux Discovery Report" > $serveroutputfile
+echo $serveroutputfile >> $serveroutputfile
 
 # hostname
-echo "" >> services.out
-echo "------------------" >> services.out
-echo "Server/Domain_Name" >> services.out
-echo "------------------" >> services.out
-hostname >> services.out
-hostname --fqdn >> services.out
-cat /proc/sys/kernel/hostname >> services.out
+echo "" >> $serveroutputfile
+echo "------------------" >> $serveroutputfile
+echo "Server/Domain_Name" >> $serveroutputfile
+echo "------------------" >> $serveroutputfile
+hostname >> $serveroutputfile
+hostname --fqdn >> $serveroutputfile
+cat /proc/sys/kernel/hostname >> $serveroutputfile
 
 # get OS Level
-echo "" >> services.out
-echo "--------" >> services.out
-echo "OS Level" >> services.out
-echo "--------" >> services.out
-egrep '^(VERSION|NAME)=' /etc/os-release >> services.out
+echo "" >> $serveroutputfile
+echo "--------" >> $serveroutputfile
+echo "OS Level" >> $serveroutputfile
+echo "--------" >> $serveroutputfile
+egrep '^(VERSION|NAME)=' /etc/os-release >> $serveroutputfile
 VER=$(egrep '^(NAME)=' /etc/os-release)
 
 # get IP ADDRESSES
-echo "" >> services.out
-echo "------------" >> services.out
-echo "IP Addresses" >> services.out
-echo "------------" >> services.out
+echo "" >> $serveroutputfile
+echo "------------" >> $serveroutputfile
+echo "IP Addresses" >> $serveroutputfile
+echo "------------" >> $serveroutputfile
 if [[ $VER == *"Red"* ]]; then
     iptemp=$(ip addr show eth0 | grep -i "inet ")
     ip=$(echo $iptemp | awk '{print $2}')
 else
     ip=$(ifconfig | grep -B1 inet)
 fi
-echo $ip >> services.out
+echo $ip >> $serveroutputfile
 
 # get WEB SERVERS
-echo "" >> services.out
-echo "-----------" >> services.out
-echo "Web Servers" >> services.out
-echo "-----------" >> services.out
+echo "" >> $serveroutputfile
+echo "-----------" >> $serveroutputfile
+echo "Web Servers" >> $serveroutputfile
+echo "-----------" >> $serveroutputfile
 ## array of popular web-servers
 web_servers=("nginx" "apache" "apache2")
 
 for i in "${web_servers[@]}"
 do
-    echo $(ps aux | grep $i | grep -v grep | wc -l) $i >> services.out
+    echo $(ps aux | grep $i | grep -v grep | wc -l) $i >> $serveroutputfile
 done
 
 # get LIST of SERVICES
-echo "" >> services.out
-echo "----------------------------------------" >> services.out
-echo "List of services using systemctl command" >> services.out
-echo "----------------------------------------" >> services.out
-systemctl list-units --type=service >> services.out
+echo "" >> $serveroutputfile
+echo "----------------------------------------" >> $serveroutputfile
+echo "List of services using systemctl command" >> $serveroutputfile
+echo "----------------------------------------" >> $serveroutputfile
+systemctl list-units --type=service >> $serveroutputfile
 
-echo "" >> services.out
-echo "--------------------------------------" >> services.out
-echo "List of services using service command" >> services.out
-echo "--------------------------------------" >> services.out
-service --status-all >> services.out
+echo "" >> $serveroutputfile
+echo "--------------------------------------" >> $serveroutputfile
+echo "List of services using service command" >> $serveroutputfile
+echo "--------------------------------------" >> $serveroutputfile
+service --status-all >> $serveroutputfile
 
 # get PORT ALLOCATION
-echo "" >> services.out
-echo "-----------------------------" >> services.out
-echo "Port Allocation using netstat" >> services.out
-echo "-----------------------------" >> services.out
+echo "" >> $serveroutputfile
+echo "-----------------------------" >> $serveroutputfile
+echo "Port Allocation using netstat" >> $serveroutputfile
+echo "-----------------------------" >> $serveroutputfile
 if [[ $VER == *"Red"* ]]; then
-    ss >> services.out
+    ss >> $serveroutputfile
 else
-    netstat -punta >> services.out
+    netstat -punta >> $serveroutputfile
 fi
 
 # get CPU info
-echo "" >> services.out
-echo "--------" >> services.out
-echo "CPU info" >> services.out
-echo "--------" >> services.out
-lscpu >> services.out
-egrep '^(VERSION|NAME)=' /etc/os-release >> services.out
+echo "" >> $serveroutputfile
+echo "--------" >> $serveroutputfile
+echo "CPU info" >> $serveroutputfile
+echo "--------" >> $serveroutputfile
+lscpu >> $serveroutputfile
+egrep '^(VERSION|NAME)=' /etc/os-release >> $serveroutputfile
 
 # get MEMORY info
-echo "" >> services.out
-echo "-----------" >> services.out
-echo "MEMORY info" >> services.out
-echo "-----------" >> services.out
-lsmem >> services.out
-echo "" >> services.out
-cat /proc/meminfo | grep Mem >> services.out
+echo "" >> $serveroutputfile
+echo "-----------" >> $serveroutputfile
+echo "MEMORY info" >> $serveroutputfile
+echo "-----------" >> $serveroutputfile
+lsmem >> $serveroutputfile
+echo "" >> $serveroutputfile
+cat /proc/meminfo | grep Mem >> $serveroutputfile
 
 # get DISK info
-echo "" >> services.out
-echo "---------" >> services.out
-echo "DISK info" >> services.out
-echo "---------" >> services.out
-lsblk >> services.out
+echo "" >> $serveroutputfile
+echo "---------" >> $serveroutputfile
+echo "DISK info" >> $serveroutputfile
+echo "---------" >> $serveroutputfile
+lsblk >> $serveroutputfile
 
 # get Hardware info
-echo "" >> services.out
-echo "-------------" >> services.out
-echo "HARDWARE info" >> services.out
-echo "-------------" >> services.out
-sudo lshw >> services.out
+echo "" >> $serveroutputfile
+echo "-------------" >> $serveroutputfile
+echo "HARDWARE info" >> $serveroutputfile
+echo "-------------" >> $serveroutputfile
+lshw >> $serveroutputfile
 
+# get USERS info
+echo "" >> $serveroutputfile
+echo "-------------" >> $serveroutputfile
+echo "USERS info" >> $serveroutputfile
+echo "-------------" >> $serveroutputfile
+cat /etc/passwd >> $serveroutputfile
 
-
+# get CURRENT RUNNING STATE processes info
+echo "" >> $serveroutputfile
+echo "-------------" >> $serveroutputfile
+echo "USERS info" >> $serveroutputfile
+echo "-------------" >> $serveroutputfile
+ps aux >> $serveroutputfile
